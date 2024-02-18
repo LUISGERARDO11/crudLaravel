@@ -17,8 +17,10 @@ use App\Http\Controllers\UsuarioController;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::resource('usuarios',UsuarioController::class);
 
-Route::get('/usuarios', [UsuarioController::class, 'index']);
+
+/*Route::get('/usuarios', [UsuarioController::class, 'index']);
 Route::post('/usuariosr', [UsuarioController::class, 'store']);
 Route::get('/usuariosbc', [UsuarioController::class, 'comeBack'])->name('usuariosbc');
-
+*/
